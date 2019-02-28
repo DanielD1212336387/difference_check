@@ -1,41 +1,41 @@
-EDGE
+CHROME
 
-<div tabindex="-1" class="lui-popover-container ng-scope" id="lui-popover-9" style="left: 641px; top: 47px; margin-right: 10px; margin-bottom: 10px; position: absolute;" ng-style="style" qva-outside-ignore-for="" qva-outside="onOutside($event)" x-arrow="arrow" x-variant="variant" x-close="close" x-input="input" x-controller="controller" x-template="template" lui-component="" qva-focus="autoFocus"><div class="qv-listbox-popover ng-scope lui-popover" style="min-width: 200px;width: 234px;height: 332px" qva-outside-ignore-for="" qva-scroll-outside="close()" on-close-view="closeView(event)" lui-class-list="classList">
+<div id="lui-popover-4" class="lui-popover-container ng-scope" tabindex="-1" qva-focus="autoFocus" ng-style="style" lui-component="" x-template="template" x-controller="controller" x-input="input" x-close="close" x-variant="variant" x-arrow="arrow" qva-outside="onOutside($event)" qva-outside-ignore-for="" style="position: absolute; top: 366px; left: 649px; margin-right: 10px; margin-bottom: 10px;"><div lui-class-list="classList" class="qv-listbox-popover ng-scope lui-popover" style="min-width: 200px;width: 234px;height: 332px" on-close-view="closeView(event)" qva-outside-ignore-for="" qva-scroll-outside="close()">
 	<ng-transclude>
-	<div class="lui-nopad lui-popover__body ng-scope" style="height: 332px" ng-transclude="">
-		<div class="toolbar-wrapper ng-scope ng-isolate-scope" options="input.options" component="input.selectionToolbarComponent" toolbar="toolbar" qva-include-selection-toolbar=""><div class="qv-selection-toolbar qvt-selection-toolbar ng-scope sel-toolbar-popover" style="width: 232px;" dir="ltr" ng-click="locked &amp;&amp; toggleLock($event);" ng-class="{ 'sel-toolbar-card': !options.isPopover, 'sel-toolbar-popover': options.isPopover, 'sel-toolbar-click-to-unlock-bg': locked, 'sel-toolbar-menu-item': locked }" ng-style="toolbar.style" qva-direction="">
+	<div class="lui-nopad lui-popover__body ng-scope" ng-transclude="" style="height: 332px">
+		<div class="toolbar-wrapper ng-scope ng-isolate-scope" qva-include-selection-toolbar="" component="input.selectionToolbarComponent" toolbar="toolbar" options="input.options"><div qva-direction="" class="qv-selection-toolbar qvt-selection-toolbar ng-scope sel-toolbar-popover" ng-style="toolbar.style" ng-class="{ 'sel-toolbar-card': !options.isPopover, 'sel-toolbar-popover': options.isPopover, 'sel-toolbar-click-to-unlock-bg': locked, 'sel-toolbar-menu-item': locked }" ng-click="locked &amp;&amp; toggleLock($event);" dir="ltr" style="width: 232px;">
     <div class="sel-toolbar-list-wrapper">
 		<table class="sel-toolbar-list">
             <tbody><tr>
                 <!-- ngIf: toolbar.showLock || locked -->
 				<td class="sel-toolbar-list-item" ng-class="{ 'sel-toolbar-list-item-hide-more': !shouldShowBtnMore() }">
-					<button title="Selection menu" class="sel-toolbar-btn sel-toolbar-icon sel-toolbar-icon-toggle" ng-click="toggleShowMenu($event)" ng-class="{ 'menu-active': toolbar.showMenu }" tid="selection-toolbar.toggleShowMenu" q-title-translation="Tooltip.SelectionMenu">
+					<button tid="selection-toolbar.toggleShowMenu" class="sel-toolbar-btn sel-toolbar-icon sel-toolbar-icon-toggle" ng-class="{ 'menu-active': toolbar.showMenu }" q-title-translation="Tooltip.SelectionMenu" ng-click="toggleShowMenu($event)" title="Selection menu">
 						<span class="lui-icon  lui-icon--more"></span>
 					</button>
 				</td>
-                <td class="sel-toolbar-list-item-locked ng-hide" ng-show="locked">
+                <td ng-show="locked" class="sel-toolbar-list-item-locked ng-hide">
                     <p class="sel-toolbar-menu-text" q-translation="SelectionToolbar.ClickToUnlock">Click to unlock</p>
                 </td>
-                <td class="sel-toolbar-list-item-close ng-hide" ng-click="toolbar.selectionsApi.confirm()" ng-show="locked &amp;&amp; options.smallDevice">
+                <td ng-show="locked &amp;&amp; options.smallDevice" ng-click="toolbar.selectionsApi.confirm()" class="sel-toolbar-list-item-close ng-hide">
                     <qui-toolbarbutton>
                         <span class="sel-toolbar-menu-text sel-toolbar-btn-close-text" q-translation="Common.Close">Close</span>
                     </qui-toolbarbutton>
 				</td>
 				<!-- ngRepeat: select in selectComponents -->
-                <!-- ngRepeat: button in filteredButtons --><td class="sel-toolbar-list-item ng-scope" ng-class="button.clazz" ng-show="!locked" ng-repeat="button in filteredButtons">
-                    <button title="Clear selection" disabled="disabled" class="sel-toolbar-btn clear sel-toolbar-icon" ng-disabled="buttonIsDisabled(button)" ng-click="buttonAction($event, button)" ng-class="[button.buttonClass, button.isIcon ? 'sel-toolbar-icon' : '', button.isActive(this) ? 'menu-active' : '']" tid="selection-toolbar.clear" q-title-translation="Tooltip.clearSelection">
+                <!-- ngRepeat: button in filteredButtons --><td ng-show="!locked" ng-repeat="button in filteredButtons" class="sel-toolbar-list-item ng-scope" ng-class="button.clazz">
+                    <button tid="selection-toolbar.clear" ng-click="buttonAction($event, button)" q-title-translation="Tooltip.clearSelection" ng-disabled="buttonIsDisabled(button)" class="sel-toolbar-btn clear sel-toolbar-icon" ng-class="[button.buttonClass, button.isIcon ? 'sel-toolbar-icon' : '', button.isActive(this) ? 'menu-active' : '']" disabled="disabled" title="Clear selection">
                         <span class="sel-toolbar-span-icon lui-icon lui-icon--clear-selections" ng-class="button.iconClass"></span>
                     </button>
-                </td><!-- end ngRepeat: button in filteredButtons --><td class="sel-toolbar-list-item ng-scope sel-toolbar-separator" ng-class="button.clazz" ng-show="!locked" ng-repeat="button in filteredButtons">
-                    <button disabled="disabled" class="sel-toolbar-btn sel-toolbar-icon-separator" ng-disabled="buttonIsDisabled(button)" ng-click="buttonAction($event, button)" ng-class="[button.buttonClass, button.isIcon ? 'sel-toolbar-icon' : '', button.isActive(this) ? 'menu-active' : '']" tid="" q-title-translation="">
+                </td><!-- end ngRepeat: button in filteredButtons --><td ng-show="!locked" ng-repeat="button in filteredButtons" class="sel-toolbar-list-item ng-scope sel-toolbar-separator" ng-class="button.clazz">
+                    <button tid="" ng-click="buttonAction($event, button)" q-title-translation="" ng-disabled="buttonIsDisabled(button)" class="sel-toolbar-btn sel-toolbar-icon-separator" ng-class="[button.buttonClass, button.isIcon ? 'sel-toolbar-icon' : '', button.isActive(this) ? 'menu-active' : '']" disabled="disabled">
                         <span class="sel-toolbar-span-icon lui-icon" ng-class="button.iconClass"></span>
                     </button>
-                </td><!-- end ngRepeat: button in filteredButtons --><td class="sel-toolbar-list-item ng-scope" ng-class="button.clazz" ng-show="!locked" ng-repeat="button in filteredButtons">
-                    <button title="Cancel selection" class="sel-toolbar-btn sel-toolbar-cancel" ng-disabled="buttonIsDisabled(button)" ng-click="buttonAction($event, button)" ng-class="[button.buttonClass, button.isIcon ? 'sel-toolbar-icon' : '', button.isActive(this) ? 'menu-active' : '']" tid="selection-toolbar.undo" q-title-translation="Tooltip.CancelSelections">
+                </td><!-- end ngRepeat: button in filteredButtons --><td ng-show="!locked" ng-repeat="button in filteredButtons" class="sel-toolbar-list-item ng-scope" ng-class="button.clazz">
+                    <button tid="selection-toolbar.undo" ng-click="buttonAction($event, button)" q-title-translation="Tooltip.CancelSelections" ng-disabled="buttonIsDisabled(button)" class="sel-toolbar-btn sel-toolbar-cancel" ng-class="[button.buttonClass, button.isIcon ? 'sel-toolbar-icon' : '', button.isActive(this) ? 'menu-active' : '']" title="Cancel selection">
                         <span class="sel-toolbar-span-icon lui-icon lui-icon--close" ng-class="button.iconClass"></span>
                     </button>
-                </td><!-- end ngRepeat: button in filteredButtons --><td class="sel-toolbar-list-item ng-scope" ng-class="button.clazz" ng-show="!locked" ng-repeat="button in filteredButtons">
-                    <button title="Confirm selection" disabled="disabled" class="sel-toolbar-btn sel-toolbar-confirm" ng-disabled="buttonIsDisabled(button)" ng-click="buttonAction($event, button)" ng-class="[button.buttonClass, button.isIcon ? 'sel-toolbar-icon' : '', button.isActive(this) ? 'menu-active' : '']" tid="selection-toolbar.refresh" q-title-translation="Tooltip.ConfirmSelections">
+                </td><!-- end ngRepeat: button in filteredButtons --><td ng-show="!locked" ng-repeat="button in filteredButtons" class="sel-toolbar-list-item ng-scope" ng-class="button.clazz">
+                    <button tid="selection-toolbar.refresh" ng-click="buttonAction($event, button)" q-title-translation="Tooltip.ConfirmSelections" ng-disabled="buttonIsDisabled(button)" class="sel-toolbar-btn sel-toolbar-confirm" ng-class="[button.buttonClass, button.isIcon ? 'sel-toolbar-icon' : '', button.isActive(this) ? 'menu-active' : '']" disabled="disabled" title="Confirm selection">
                         <span class="sel-toolbar-span-icon lui-icon lui-icon--tick" ng-class="button.iconClass"></span>
                     </button>
                 </td><!-- end ngRepeat: button in filteredButtons -->
@@ -49,23 +49,23 @@ EDGE
 </div>
 </div>
 		<div class="listbox-wrapper ng-scope">
-			<div class="qv-object-wrapper ng-isolate-scope" object="object" options="input.options" model="input.model" x-ms-format-detection="none" ng-class="wrapperClassList">
+			<div class="qv-object-wrapper ng-isolate-scope" ng-class="wrapperClassList" x-ms-format-detection="none" object="object" model="input.model" options="input.options">
 
 	<article class="qv-object qvt-visualization qv-layout-xsmall qv-object-listbox qv-selections-active" ng-class="classList" tid="qv-object-listbox">
-		<div class="qv-inner-object" style="background-color: transparent;" ng-style="styles.backgroundColor">
+		<div class="qv-inner-object" ng-style="styles.backgroundColor" style="background-color: transparent;">
 			<!-- ngIf: object.throbberApi.isVisible -->
 			<!-- ngIf: object.throbberApi.isQueryCanceled -->
 			<!-- ngIf: object.throbberApi.isLongRunningQuery && !object.throbberApi.isQueryCanceled -->
 
 			<label class="hidden-screen-reader-label" q-translation="Object.Listbox">List box</label>
 			<!-- ngIf: !layout.title -->
-			<header class="qv-object-header ng-hide" dir="ltr" ng-class="{'thin' : !object.showTitles || ( layout.title === '' &amp;&amp; layout.subtitle === '' &amp;&amp; !object._inEditState )}" ng-show="object.hasFrame" x-dir-setting="ltr" qva-direction="">
-				<h1 title="Season" class="qv-object-title qvt-visualization-title" style="color: rgb(89, 89, 89); font-size: 1em;" dir="ltr" ng-style="styles.title" qva-activate="titleClicked();" ng-show="object.showTitles" x-dir-setting="ltr" qva-direction="" ng-attr-title="{{layout.title}}">
-					<!-- ngIf: options.showSearch && object.isInteractive && !object.backendApi.isLocked() && !object._inEditState --><a title="Search" class="qv-object-search lui-icon lui-icon--search ng-scope" ng-if="options.showSearch &amp;&amp; object.isInteractive &amp;&amp; !object.backendApi.isLocked() &amp;&amp; !object._inEditState" qva-activate="options.showSearch &amp;&amp; options.search.toggle()" q-title-translation="Common.Search"></a><!-- end ngIf: options.showSearch && object.isInteractive && !object.backendApi.isLocked() && !object._inEditState -->
+			<header qva-direction="" x-dir-setting="ltr" ng-show="object.hasFrame" class="qv-object-header ng-hide" ng-class="{'thin' : !object.showTitles || ( layout.title === '' &amp;&amp; layout.subtitle === '' &amp;&amp; !object._inEditState )}" dir="ltr">
+				<h1 ng-show="object.showTitles" qva-direction="" x-dir-setting="ltr" ng-attr-title="{{layout.title}}" class="qv-object-title qvt-visualization-title" qva-activate="titleClicked();" ng-style="styles.title" dir="ltr" title="Season" style="font-size: 1em; color: rgb(89, 89, 89);">
+					<!-- ngIf: options.showSearch && object.isInteractive && !object.backendApi.isLocked() && !object._inEditState --><a ng-if="options.showSearch &amp;&amp; object.isInteractive &amp;&amp; !object.backendApi.isLocked() &amp;&amp; !object._inEditState" q-title-translation="Common.Search" class="qv-object-search lui-icon lui-icon--search ng-scope" qva-activate="options.showSearch &amp;&amp; options.search.toggle()" title="Search"></a><!-- end ngIf: options.showSearch && object.isInteractive && !object.backendApi.isLocked() && !object._inEditState -->
 					<!-- ngIf: options.showSearch && object.isInteractive && object.backendApi.isLocked() -->
 					<!-- ngIf: options.showSearch && object.backendApi.isDrillDown() -->
 					<!-- ngIf: options.highlightTitle && (!object._inEditState || object._inEditState && object.isReadonly) -->
-					<!-- ngIf: !options.highlightTitle && (!object._inEditState || object._inEditState && object.isReadonly) --><div class="qv-object-title-text ng-binding ng-scope" dir="ltr" ng-if="!options.highlightTitle &amp;&amp; (!object._inEditState || object._inEditState &amp;&amp; object.isReadonly)" x-dir-setting="ltr" qva-direction="" x-dir-text="Season">Season</div><!-- end ngIf: !options.highlightTitle && (!object._inEditState || object._inEditState && object.isReadonly) -->
+					<!-- ngIf: !options.highlightTitle && (!object._inEditState || object._inEditState && object.isReadonly) --><div ng-if="!options.highlightTitle &amp;&amp; (!object._inEditState || object._inEditState &amp;&amp; object.isReadonly)" class="qv-object-title-text ng-binding ng-scope" qva-direction="" x-dir-setting="ltr" x-dir-text="Season" dir="ltr">Season</div><!-- end ngIf: !options.highlightTitle && (!object._inEditState || object._inEditState && object.isReadonly) -->
 					<!-- ngIf: options.showDisclaimerStar && !!layout.title && !object._inEditState -->
 					<!-- ngIf: object._inEditState && !object.isReadonly -->
 				</h1>
@@ -74,81 +74,81 @@ EDGE
 			</header>
 
 			<div class="qv-object-content-container">
-				<div class="qv-object-content ng-isolate-scope" object="object" options="options" on-init="onInit" throbber-api="object.throbberApi" tooltip-api="object.tooltipApi" selections-api="object.selectionsApi" ext="object.ext" layout="layout" backend-api="object.backendApi" component="object.content" qv-object-content=""><div class="qv-listbox-container ng-scope qv-listbox-interactive" ng-class="{ 'qv-listbox-interactive': navigatable }" tid="qv-listbox-container" ng-focus="setFocus()">
-	<div class="qv-listbox-search" dir="ltr" ng-show="options.search.show" x-dir-setting="ltr" qva-direction="" qv-listbox-search="">
-		<div class="ng-isolate-scope lui-search" ng-class="searchFocusClass" query="query" lui-class-list="classList" placeholder="Object.Listbox.Search" auto-focus="autoFocus" on-escape="onEscape($event);" is-focused="focusedSearch">
+				<div class="qv-object-content ng-isolate-scope" qv-object-content="" component="object.content" options="options" object="object" backend-api="object.backendApi" layout="layout" ext="object.ext" selections-api="object.selectionsApi" tooltip-api="object.tooltipApi" throbber-api="object.throbberApi" on-init="onInit"><div class="qv-listbox-container ng-scope qv-listbox-interactive" ng-focus="setFocus()" ng-class="{ 'qv-listbox-interactive': navigatable }" tid="qv-listbox-container">
+	<div qva-direction="" x-dir-setting="ltr" qv-listbox-search="" ng-show="options.search.show" class="qv-listbox-search" dir="ltr">
+		<div lui-class-list="classList" query="query" is-focused="focusedSearch" on-escape="onEscape($event);" auto-focus="autoFocus" placeholder="Object.Listbox.Search" ng-class="searchFocusClass" class="ng-isolate-scope lui-search">
 	<span class="lui-icon  lui-icon--search  lui-search__search-icon"></span>
-	<input class="lui-search__input ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched" spellcheck="false" type="text" maxlength="255" placeholder="Search in listbox" ng-model="query" ng-disabled="disabled" autocomplete="" qva-focus="autoFocus" qv-enter="enter($event)" qv-escape="escape($event)" qva-blur="blurred()" ng-trim="false" q-placeholder="Object.Listbox.Search">
-	<button title="Clear" class="lui-search__clear-button ng-hide" ng-click="clearSearch($event)" ng-show="query.length" q-title-translation="Common.Clear">
+	<input class="lui-search__input ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched" maxlength="255" q-placeholder="Object.Listbox.Search" ng-model="query" ng-disabled="disabled" autocomplete="" spellcheck="false" ng-trim="false" type="text" qva-blur="blurred()" qva-focus="autoFocus" qv-escape="escape($event)" qv-enter="enter($event)" placeholder="Search in listbox">
+	<button class="lui-search__clear-button ng-hide" q-title-translation="Common.Clear" ng-show="query.length" ng-click="clearSearch($event)" title="Clear">
 		<span class="lui-icon  lui-icon--small  lui-icon--close"></span>
 	</button>
 </div>
 	</div>
 	<div class="qv-listbox-wrapper searchActive" ng-class="{ 'searchActive': options.search.show }">
 		<!-- ngIf: showSearchThrobber -->
-		<div class="qv-listbox-scroll-area qv-animate ng-isolate-scope qv-listbox-virtual-scroll-enabled" dir="ltr" ng-class="{ 'qv-listbox-virtual-scroll-enabled': scrollApi.virtualScrollEnabled }" x-direction="options.direction">
+		<div dir="ltr" class="qv-listbox-scroll-area qv-animate ng-isolate-scope qv-listbox-virtual-scroll-enabled" ng-class="{ 'qv-listbox-virtual-scroll-enabled': scrollApi.virtualScrollEnabled }" x-direction="options.direction" style="">
 	<div class="scroll-content" ng-transclude="">
-			<ul class="qv-listbox ng-scope" role="listbox" style="color: rgb(89, 89, 89); font-size: 12px;" dir="ltr" ng-class="{ 'align-bottom': scrollApi.alignBottomAbsolute }" ng-style="listStyle" x-dir-setting="ltr" qva-direction="" qv-selections-end-multiselect="interactive &amp;&amp; multiselectEnd($event)" qv-selections-update-multiselect="interactive &amp;&amp; multiselectUpdate(start, current)" qv-selections-start-multiselect="interactive &amp;&amp; multiselectStart($event)" qv-selections-multiselect="{ selector: 'li', itemKey: 'item' }" qv-selections-on-toggle-dimension-value="interactive &amp;&amp; select($event, item)" qv-selections-toggle-dimension-value="{ selector: 'li', itemKey: 'item' }" qv-selections-select-while-locked="selectWhileLocked()" ng-keyup="handleKeyUp($event)" ng-keydown="handleKeyDown($event)">
-				<li class="qv-listbox-load-buttons qv-scroll-data-load-buttons ng-isolate-scope ng-hide previous" ng-class="{ previous: previous }" ng-show="navigatable &amp;&amp; scrollApi.loadPrevious" text="Object.Listbox.LoadPrevious" previous="true" on-load="scrollApi.gotoPreviousBlock()" tag="li">
+			<ul class="qv-listbox ng-scope" ng-class="{ 'align-bottom': scrollApi.alignBottomAbsolute }" ng-style="listStyle" qva-direction="" x-dir-setting="ltr" qv-selections-select-while-locked="selectWhileLocked()" qv-selections-toggle-dimension-value="{ selector: 'li', itemKey: 'item' }" qv-selections-on-toggle-dimension-value="interactive &amp;&amp; select($event, item)" qv-selections-multiselect="{ selector: 'li', itemKey: 'item' }" qv-selections-start-multiselect="interactive &amp;&amp; multiselectStart($event)" qv-selections-update-multiselect="interactive &amp;&amp; multiselectUpdate(start, current)" qv-selections-end-multiselect="interactive &amp;&amp; multiselectEnd($event)" ng-keydown="handleKeyDown($event)" ng-keyup="handleKeyUp($event)" role="listbox" dir="ltr" style="color: rgb(89, 89, 89); font-size: 12px;">
+				<li class="qv-listbox-load-buttons qv-scroll-data-load-buttons ng-isolate-scope ng-hide previous" ng-class="{ previous: previous }" tag="li" ng-show="navigatable &amp;&amp; scrollApi.loadPrevious" on-load="scrollApi.gotoPreviousBlock()" text="Object.Listbox.LoadPrevious" previous="true">
 	<div ng-transclude=""></div>
-	<button class="lui-button" ng-disabled="disabled" qva-activate="load()">
+	<button class="lui-button" qva-activate="load()" ng-disabled="disabled">
 		<p q-translation="Object.Listbox.LoadPrevious">Load previous</p>
 	</button>
 </li>
-				<!-- ngRepeat: item in items --><li tabindex="-1" class="ng-scope serverOptional" role="option" aria-label="FA2017 Optional" ng-class="item.classNames" tid="listbox.item" ng-repeat="item in items">
+				<!-- ngRepeat: item in items --><li tabindex="-1" aria-label="FA2017 Optional" role="option" ng-repeat="item in items" ng-class="item.classNames" tid="listbox.item" class="ng-scope serverOptional">
 					<div class="qv-listbox-tick"><i class="lui-icon tick-icon lui-icon--tick" ng-class="{'lui-icon--tick': !item.locked, 'lui-icon--lock': item.locked, }"></i></div>
-					<div class="qv-listbox-text" style="text-align: left;" dir="ltr" ng-style="item.style">
-						<span title="FA2017" ng-attr-title="{{item.tipText}}">
-							<!-- ngRepeat: textItem in item.textItems --><span class="ng-binding ng-scope" ng-class="{ highlighted: textItem.isHighlighted }" ng-repeat="textItem in item.textItems" ng-bind="textItem.text">FA2017</span><!-- end ngRepeat: textItem in item.textItems -->
+					<div class="qv-listbox-text" ng-style="item.style" dir="auto" style="text-align: left;">
+						<span ng-attr-title="{{item.tipText}}" title="FA2017">
+							<!-- ngRepeat: textItem in item.textItems --><span ng-repeat="textItem in item.textItems" ng-class="{ highlighted: textItem.isHighlighted }" ng-bind="textItem.text" class="ng-binding ng-scope">FA2017</span><!-- end ngRepeat: textItem in item.textItems -->
 						</span>
 					</div>
-				</li><!-- end ngRepeat: item in items --><li tabindex="-1" class="ng-scope serverOptional" role="option" aria-label="FA2018 Optional" ng-class="item.classNames" tid="listbox.item" ng-repeat="item in items">
+				</li><!-- end ngRepeat: item in items --><li tabindex="-1" aria-label="FA2018 Optional" role="option" ng-repeat="item in items" ng-class="item.classNames" tid="listbox.item" class="ng-scope serverOptional">
 					<div class="qv-listbox-tick"><i class="lui-icon tick-icon lui-icon--tick" ng-class="{'lui-icon--tick': !item.locked, 'lui-icon--lock': item.locked, }"></i></div>
-					<div class="qv-listbox-text" style="text-align: left;" dir="ltr" ng-style="item.style">
-						<span title="FA2018" ng-attr-title="{{item.tipText}}">
-							<!-- ngRepeat: textItem in item.textItems --><span class="ng-binding ng-scope" ng-class="{ highlighted: textItem.isHighlighted }" ng-repeat="textItem in item.textItems" ng-bind="textItem.text">FA2018</span><!-- end ngRepeat: textItem in item.textItems -->
+					<div class="qv-listbox-text" ng-style="item.style" dir="auto" style="text-align: left;">
+						<span ng-attr-title="{{item.tipText}}" title="FA2018">
+							<!-- ngRepeat: textItem in item.textItems --><span ng-repeat="textItem in item.textItems" ng-class="{ highlighted: textItem.isHighlighted }" ng-bind="textItem.text" class="ng-binding ng-scope">FA2018</span><!-- end ngRepeat: textItem in item.textItems -->
 						</span>
 					</div>
-				</li><!-- end ngRepeat: item in items --><li tabindex="-1" class="ng-scope serverOptional" role="option" aria-label="HO2017 Optional" ng-class="item.classNames" tid="listbox.item" ng-repeat="item in items">
+				</li><!-- end ngRepeat: item in items --><li tabindex="-1" aria-label="HO2017 Optional" role="option" ng-repeat="item in items" ng-class="item.classNames" tid="listbox.item" class="ng-scope serverOptional">
 					<div class="qv-listbox-tick"><i class="lui-icon tick-icon lui-icon--tick" ng-class="{'lui-icon--tick': !item.locked, 'lui-icon--lock': item.locked, }"></i></div>
-					<div class="qv-listbox-text" style="text-align: left;" dir="ltr" ng-style="item.style">
-						<span title="HO2017" ng-attr-title="{{item.tipText}}">
-							<!-- ngRepeat: textItem in item.textItems --><span class="ng-binding ng-scope" ng-class="{ highlighted: textItem.isHighlighted }" ng-repeat="textItem in item.textItems" ng-bind="textItem.text">HO2017</span><!-- end ngRepeat: textItem in item.textItems -->
+					<div class="qv-listbox-text" ng-style="item.style" dir="auto" style="text-align: left;">
+						<span ng-attr-title="{{item.tipText}}" title="HO2017">
+							<!-- ngRepeat: textItem in item.textItems --><span ng-repeat="textItem in item.textItems" ng-class="{ highlighted: textItem.isHighlighted }" ng-bind="textItem.text" class="ng-binding ng-scope">HO2017</span><!-- end ngRepeat: textItem in item.textItems -->
 						</span>
 					</div>
-				</li><!-- end ngRepeat: item in items --><li tabindex="-1" class="ng-scope serverOptional" role="option" aria-label="HO2018 Optional" ng-class="item.classNames" tid="listbox.item" ng-repeat="item in items">
+				</li><!-- end ngRepeat: item in items --><li tabindex="-1" aria-label="HO2018 Optional" role="option" ng-repeat="item in items" ng-class="item.classNames" tid="listbox.item" class="ng-scope serverOptional">
 					<div class="qv-listbox-tick"><i class="lui-icon tick-icon lui-icon--tick" ng-class="{'lui-icon--tick': !item.locked, 'lui-icon--lock': item.locked, }"></i></div>
-					<div class="qv-listbox-text" style="text-align: left;" dir="ltr" ng-style="item.style">
-						<span title="HO2018" ng-attr-title="{{item.tipText}}">
-							<!-- ngRepeat: textItem in item.textItems --><span class="ng-binding ng-scope" ng-class="{ highlighted: textItem.isHighlighted }" ng-repeat="textItem in item.textItems" ng-bind="textItem.text">HO2018</span><!-- end ngRepeat: textItem in item.textItems -->
+					<div class="qv-listbox-text" ng-style="item.style" dir="auto" style="text-align: left;">
+						<span ng-attr-title="{{item.tipText}}" title="HO2018">
+							<!-- ngRepeat: textItem in item.textItems --><span ng-repeat="textItem in item.textItems" ng-class="{ highlighted: textItem.isHighlighted }" ng-bind="textItem.text" class="ng-binding ng-scope">HO2018</span><!-- end ngRepeat: textItem in item.textItems -->
 						</span>
 					</div>
-				</li><!-- end ngRepeat: item in items --><li tabindex="-1" class="ng-scope serverOptional" role="option" aria-label="SP2018 Optional" ng-class="item.classNames" tid="listbox.item" ng-repeat="item in items">
+				</li><!-- end ngRepeat: item in items --><li tabindex="-1" aria-label="SP2018 Optional" role="option" ng-repeat="item in items" ng-class="item.classNames" tid="listbox.item" class="ng-scope serverOptional">
 					<div class="qv-listbox-tick"><i class="lui-icon tick-icon lui-icon--tick" ng-class="{'lui-icon--tick': !item.locked, 'lui-icon--lock': item.locked, }"></i></div>
-					<div class="qv-listbox-text" style="text-align: left;" dir="ltr" ng-style="item.style">
-						<span title="SP2018" ng-attr-title="{{item.tipText}}">
-							<!-- ngRepeat: textItem in item.textItems --><span class="ng-binding ng-scope" ng-class="{ highlighted: textItem.isHighlighted }" ng-repeat="textItem in item.textItems" ng-bind="textItem.text">SP2018</span><!-- end ngRepeat: textItem in item.textItems -->
+					<div class="qv-listbox-text" ng-style="item.style" dir="auto" style="text-align: left;">
+						<span ng-attr-title="{{item.tipText}}" title="SP2018">
+							<!-- ngRepeat: textItem in item.textItems --><span ng-repeat="textItem in item.textItems" ng-class="{ highlighted: textItem.isHighlighted }" ng-bind="textItem.text" class="ng-binding ng-scope">SP2018</span><!-- end ngRepeat: textItem in item.textItems -->
 						</span>
 					</div>
-				</li><!-- end ngRepeat: item in items --><li tabindex="-1" class="ng-scope serverOptional" role="option" aria-label="SP2019 Optional" ng-class="item.classNames" tid="listbox.item" ng-repeat="item in items">
+				</li><!-- end ngRepeat: item in items --><li tabindex="-1" aria-label="SP2019 Optional" role="option" ng-repeat="item in items" ng-class="item.classNames" tid="listbox.item" class="ng-scope serverOptional">
 					<div class="qv-listbox-tick"><i class="lui-icon tick-icon lui-icon--tick" ng-class="{'lui-icon--tick': !item.locked, 'lui-icon--lock': item.locked, }"></i></div>
-					<div class="qv-listbox-text" style="text-align: left;" dir="ltr" ng-style="item.style">
-						<span title="SP2019" ng-attr-title="{{item.tipText}}">
-							<!-- ngRepeat: textItem in item.textItems --><span class="ng-binding ng-scope" ng-class="{ highlighted: textItem.isHighlighted }" ng-repeat="textItem in item.textItems" ng-bind="textItem.text">SP2019</span><!-- end ngRepeat: textItem in item.textItems -->
+					<div class="qv-listbox-text" ng-style="item.style" dir="auto" style="text-align: left;">
+						<span ng-attr-title="{{item.tipText}}" title="SP2019">
+							<!-- ngRepeat: textItem in item.textItems --><span ng-repeat="textItem in item.textItems" ng-class="{ highlighted: textItem.isHighlighted }" ng-bind="textItem.text" class="ng-binding ng-scope">SP2019</span><!-- end ngRepeat: textItem in item.textItems -->
 						</span>
 					</div>
-				</li><!-- end ngRepeat: item in items --><li tabindex="-1" class="ng-scope serverOptional" role="option" aria-label="SU2018 Optional" ng-class="item.classNames" tid="listbox.item" ng-repeat="item in items">
+				</li><!-- end ngRepeat: item in items --><li tabindex="-1" aria-label="SU2018 Optional" role="option" ng-repeat="item in items" ng-class="item.classNames" tid="listbox.item" class="ng-scope serverOptional">
 					<div class="qv-listbox-tick"><i class="lui-icon tick-icon lui-icon--tick" ng-class="{'lui-icon--tick': !item.locked, 'lui-icon--lock': item.locked, }"></i></div>
-					<div class="qv-listbox-text" style="text-align: left;" dir="ltr" ng-style="item.style">
-						<span title="SU2018" ng-attr-title="{{item.tipText}}">
-							<!-- ngRepeat: textItem in item.textItems --><span class="ng-binding ng-scope" ng-class="{ highlighted: textItem.isHighlighted }" ng-repeat="textItem in item.textItems" ng-bind="textItem.text">SU2018</span><!-- end ngRepeat: textItem in item.textItems -->
+					<div class="qv-listbox-text" ng-style="item.style" dir="auto" style="text-align: left;">
+						<span ng-attr-title="{{item.tipText}}" title="SU2018">
+							<!-- ngRepeat: textItem in item.textItems --><span ng-repeat="textItem in item.textItems" ng-class="{ highlighted: textItem.isHighlighted }" ng-bind="textItem.text" class="ng-binding ng-scope">SU2018</span><!-- end ngRepeat: textItem in item.textItems -->
 						</span>
 					</div>
 				</li><!-- end ngRepeat: item in items -->
-				<li class="qv-scroll-row-loader qv-scroll-loader qv-animate ng-isolate-scope" style="width: 0px; height: 0px;" ng-style="loaderStyle" tag="li"><!-- ngIf: showRain --></li>
-				<li class="qv-listbox-load-buttons qv-scroll-data-load-buttons ng-isolate-scope ng-hide" ng-class="{ previous: previous }" ng-show="navigatable &amp;&amp; scrollApi.loadNext" text="Object.Listbox.LoadMore" on-load="scrollApi.gotoNextBlock()" tag="li">
+				<li ng-style="loaderStyle" class="qv-scroll-row-loader qv-scroll-loader qv-animate ng-isolate-scope" tag="li" style="width: 0px; height: 0px;"><!-- ngIf: showRain --></li>
+				<li class="qv-listbox-load-buttons qv-scroll-data-load-buttons ng-isolate-scope ng-hide" ng-class="{ previous: previous }" tag="li" ng-show="navigatable &amp;&amp; scrollApi.loadNext" on-load="scrollApi.gotoNextBlock()" text="Object.Listbox.LoadMore">
 	<div ng-transclude=""></div>
-	<button class="lui-button" ng-disabled="disabled" qva-activate="load()">
+	<button class="lui-button" qva-activate="load()" ng-disabled="disabled">
 		<p q-translation="Object.Listbox.LoadMore">Load more</p>
 	</button>
 </li>
@@ -161,17 +161,17 @@ EDGE
 	<!-- ngIf: scrollbarY.enabled -->
 	<!-- ngIf: scrollbarX.enabled -->
 </div>
-		<div class="qv-scroll-loader qv-animate ng-isolate-scope" style="width: 0px; height: 0px;" ng-style="loaderStyle"><!-- ngIf: showRain --></div>
+		<div ng-style="loaderStyle" class="qv-scroll-loader qv-animate ng-isolate-scope" style="width: 0px; height: 0px;"><!-- ngIf: showRain --></div>
 	</div>
 </div></div>
 			</div>
 		</div>
-		<div class="qv-footer-wrapper ng-hide" style="color: rgb(128, 128, 128); font-size: 0.92em; background-color: transparent;" ng-style="styles.footer" ng-show="object.hasFrame &amp;&amp; object.showTitles &amp;&amp; !!layout.footnote">
+		<div class="qv-footer-wrapper ng-hide" ng-show="object.hasFrame &amp;&amp; object.showTitles &amp;&amp; !!layout.footnote" ng-style="styles.footer" style="font-size: 0.923077em; color: rgb(128, 128, 128); background-color: transparent;">
 			<!-- ngIf: object.hasFrame && object.showTitles && !!layout.footnote -->
 		</div>
 
 
-	<div class="qv-object-nav" aria-hidden="true" dir="ltr" ng-class="{'zero-top' : options.isZoomed, 'visible' : navMenu.visible, 'active': options.isActive, 'inline' : thinHeader}" x-dir-setting="ltr" qva-direction="">
+	<div qva-direction="" x-dir-setting="ltr" class="qv-object-nav" aria-hidden="true" ng-class="{'zero-top' : options.isZoomed, 'visible' : navMenu.visible, 'active': options.isActive, 'inline' : thinHeader}" dir="ltr">
 			<!-- ngRepeat: menuItem in navMenu.items -->
 		</div>
 
@@ -182,6 +182,6 @@ EDGE
 		</div>
 	</div>
 </ng-transclude>
-	<!-- ngIf: showArrow --><div class="lui-popover__arrow ng-scope lui-popover__arrow--top" style="left: 122px;" ng-if="showArrow" ng-class="'lui-popover__arrow--'+arrow.direction" ng-style="arrow.style"></div><!-- end ngIf: showArrow -->
+	<!-- ngIf: showArrow --><div class="lui-popover__arrow ng-scope lui-popover__arrow--bottom" ng-if="showArrow" ng-style="arrow.style" ng-class="'lui-popover__arrow--'+arrow.direction" style="left: 122px;"></div><!-- end ngIf: showArrow -->
 </div>
 </div>
